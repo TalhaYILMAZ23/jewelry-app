@@ -12,7 +12,7 @@ export const authenticateApiKey = (req: Request, res: Response, next: NextFuncti
   }
   
   // Şimdilik basit kontrol (production'da daha güvenli olmalı)
-  if (apiKey !== process.env.API_KEY) {
+  if (apiKey !== process.env.GOLD_API_KEY) {
     return res.status(401).json({
       success: false,
       message: 'Geçersiz API key'

@@ -21,8 +21,8 @@ if (!mongoose.connection.readyState) {
 }
 
 // Routes
-app.use('/products', productRoutes);
-app.use('/gold-price', goldPriceRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/gold-price', goldPriceRoutes);
 
 // Vercel için export
 export default app;
