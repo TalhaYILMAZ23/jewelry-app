@@ -1,0 +1,134 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid transparent;
+  border-top: 3px solid #3182ce;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+.ring:nth-child(1) {
+  animation-delay: 0s;
+  opacity: 1;
+}
+
+.ring:nth-child(2) {
+  animation-delay: -0.4s;
+  opacity: 0.7;
+}
+
+.ring:nth-child(3) {
+  animation-delay: -0.8s;
+  opacity: 0.4;
+}
+
+/* Size variants */
+.small .ring {
+  width: 24px;
+  height: 24px;
+}
+
+.medium .ring {
+  width: 40px;
+  height: 40px;
+}
+
+.large .ring {
+  width: 60px;
+  height: 60px;
+}
+
+.small .spinner {
+  width: 30px;
+  height: 30px;
+}
+
+.medium .spinner {
+  width: 46px;
+  height: 46px;
+}
+
+.large .spinner {
+  width: 66px;
+  height: 66px;
+}
+
+.text {
+  margin: 0;
+  color: #4a5568;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.small .text {
+  font-size: 12px;
+}
+
+.large .text {
+  font-size: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Alternative spinner styles */
+.spinner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #3182ce;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}

@@ -1,0 +1,92 @@
+.App {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.app-header {
+  text-align: center;
+  padding: 3rem 0 1rem 0;
+  background-color: #f8f9fa;
+}
+
+.app-title {
+  font-family: 'Avenir-Book', sans-serif;
+  font-weight: 400;
+  font-size: 45px;
+  color: #000000;
+  margin: 0;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #E6CA97 0%, #E1A4A9 100%);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  font-family: 'Avenir', 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.App-header p {
+  font-family: 'Avenir', 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: 0;
+  opacity: 0.9;
+  }
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .app-header {
+    padding: 2rem 0 1rem 0;
+  }
+  
+  .app-title {
+    font-size: 38px;
+  }
+  
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .app-header {
+    padding: 1.5rem 0 0.5rem 0;
+  }
+  
+  .app-title {
+    font-size: 28px;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .app-header {
+    padding: 1rem 0 0.5rem 0;
+  }
+  
+  .app-title {
+    font-size: 24px;
+  }
+  
+  main {
+    padding: 0.5rem;
+  }
+}
