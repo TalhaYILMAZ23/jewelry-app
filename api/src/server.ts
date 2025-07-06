@@ -21,12 +21,8 @@ if (!mongoose.connection.readyState) {
 }
 
 // Routes
-app.get('/', (req, res) => {
-  res.json({ message: 'Jewelry Backend API çalışıyor!' });
-});
-
-app.use('/api/products', productRoutes);
-app.use('/api/gold-price', goldPriceRoutes);
+app.use('/products', productRoutes);
+app.use('/gold-price', goldPriceRoutes);
 
 // Vercel için export
 export default app;
